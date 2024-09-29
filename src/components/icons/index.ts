@@ -1,0 +1,1 @@
+export { SvgSearch as Search } from './Search'

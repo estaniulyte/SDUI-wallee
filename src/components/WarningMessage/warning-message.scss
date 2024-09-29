@@ -1,0 +1,8 @@
+@import 'src/styles/index';
+
+.warning-message {
+    background-color: $color-primary-main-50;
+    padding: 1rem;
+    border-radius: $border-radius-md;
+    @include text-md(400);
+}

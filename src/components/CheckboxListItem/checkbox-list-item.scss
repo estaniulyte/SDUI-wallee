@@ -1,0 +1,100 @@
+@import 'src/styles/index';
+
+.checkbox-item-container input:checked~.checkmark:after {
+    display: block;
+}
+
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+.checkbox-item-container .checkmark:after {
+    left: 6px;
+    top: 1px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+.checkbox-item-container {
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+    padding-left: 32.46px;
+
+    position: relative;
+
+    &--disabled {
+        opacity: 0.6;
+        pointer-events: none;
+        cursor: not-allowed;
+    }
+
+    .checkmark {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 14px;
+        width: 14px;
+        border-radius: $border-radius-sm;
+        background-color: transparent;
+        border: 2px solid $color-primary-contrast-dark-300;
+
+    }
+
+    &:hover input~.checkmark {
+        border-color: $color-primary-main-250;
+        opacity: 0.7;
+    }
+
+    input:checked~.checkmark {
+        background-color: $color-primary-main-150;
+        border: none;
+        height: 18px;
+        width: 18px;
+    }
+
+    &--main-information {
+        display: flex;
+
+        input {
+            position: absolute;
+            opacity: 0;
+            cursor: pointer;
+            height: 0;
+            width: 0;
+        }
+
+        &--text-container {
+            display: flex;
+            flex-direction: column;
+            row-gap: 4px;
+        }
+
+        &--title {
+            color: $color-primary-contrast-dark-300;
+            @include text-md;
+        }
+
+        &--subtitle {
+            color: $color-shades-contrast-mid-light-200;
+            @include text-xs;
+        }
+    }
+
+    &--image {
+        height: 18px;
+        width: 30px;
+        margin-right: 27px;
+    }
+}
+
+.textHighlight {
+    font-weight: 900;
+}

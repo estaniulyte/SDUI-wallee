@@ -1,0 +1,17 @@
+@mixin heading-text {
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 33px;
+}
+
+@mixin text-md($fontWeight: 600) {
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: $fontWeight;
+}
+
+@mixin text-xs {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 16.5px;
+}

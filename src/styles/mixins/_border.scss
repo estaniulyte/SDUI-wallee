@@ -1,0 +1,4 @@
+@mixin bordered-box($border-color: $color-shades-outline-150, $border-width: 1px, $border-radius: $border-radius-lg) {
+    border: $border-width solid $border-color;
+    border-radius: $border-radius;
+}

@@ -19,6 +19,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
+    "build:icons": "npx @svgr/cli --template svgr-template.cjs --index-template svgr-index-template.cjs ./src/assets/icons --out-dir ./src/components/icons --typescript --no-prettier",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
@@ -39,5 +40,10 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@svgr/cli": "^8.1.0",
+    "prettier": "^3.3.3",
+    "sass": "^1.79.3"
   }
 }
